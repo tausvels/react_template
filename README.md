@@ -33,3 +33,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 - "react-redux": "^7.2.0",
 - "react-scripts": "3.4.1",
 - "redux": "^4.0.5"
+
+## Proxy in package.json file to fetch data from local server 
