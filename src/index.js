@@ -7,7 +7,8 @@ import { createStore } from 'redux';
 import {Provider} from 'react-redux';
 
 // ---- import all the states from the reducer file ----- //
-const store = createStore();
+import allReducers from './reducers'
+const store = createStore(allReducers);
 
 ReactDOM.render(
   <Provider store = {store}> {/** passing all the states as store to all the components of app */}
