@@ -21,8 +21,15 @@ Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ## Packages included in the Package.json file:
+- "axios": "^0.19.2",
+- "classnames": "^2.2.6",
+- "env-cmd": "^10.1.0",
+- "normalize.css": "^8.0.1",
+- "date-fns": "^2.11.1", [devDependencies]
+- "node-sass": "^4.13.1",[devDependencies]
+- "prop-types": "^15.7.2"[devDependencies]
 - "react": "^16.13.1",
 - "react-dom": "^16.13.1",
 - "react-redux": "^7.2.0",
 - "react-scripts": "3.4.1",
-- "redux": "^4.0.5",
+- "redux": "^4.0.5"
