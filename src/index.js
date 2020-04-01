@@ -5,9 +5,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import {Provider} from 'react-redux';
+import axios from 'axios';
 
 // ---- import all the states from the reducer file ----- //
-import allReducers from './reducers'
+import allReducers from './reducers';
+
+
+if (process.env.REACT_APP_API_BASE_URL) {
+  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+}
 const store = createStore(allReducers);
 
 ReactDOM.render(
