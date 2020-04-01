@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './home.css';
 
 // ---- IMPORT ACTIONS TO UPDATE STATE FROM THE ACTIONS FOLDER ----- //
 import { sampleAction, sampleAction2, reset } from '../../actions/sampleAction';
@@ -11,7 +12,7 @@ import { signIn, signOut } from '../../actions/loggingAction';
 const Home = ({allStates, dispatch}) => {
 
   return (
-    <div>
+    <div className = 'home_main'>
 
       <h1> WELCOME TO TAUSIF'S REACT-REDUX TEMPLATE </h1>
       <h2> This is the landing page OR HOME page</h2>
