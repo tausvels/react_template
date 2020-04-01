@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-Alternatively, change the port in Package.json file to start this App in another port.
+Alternatively, change the port in Package.json file to start this App in another port. i.e- "start":"set PORT=9000 && react-scripts start"
 
 ### `npm test`
 
