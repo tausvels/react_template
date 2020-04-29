@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { signIn, signOut } from '../../actions/loggingAction';
+// ---- IMPORT ACTIONS TO UPDATE STATE FROM THE ACTIONS FOLDER ----- //
+import { reset, sampleAction, sampleAction2 } from '../../actions/sampleAction';
+import { SampleContext } from '../../context/SampleContext';
 import './home.css';
 
-// ---- IMPORT ACTIONS TO UPDATE STATE FROM THE ACTIONS FOLDER ----- //
-import { sampleAction, sampleAction2, reset } from '../../actions/sampleAction';
-import { signIn, signOut } from '../../actions/loggingAction';
 
 
 
 // destructuing the props
 const Home = ({allStates, dispatch}) => {
   // props = {allStates: allStates, dispatch: dispatch} and hence the destructure.
+  const [sampleState, setSampleState, myFunc] = useContext(SampleContext);
+  const something = myFunc('My name is Tausif');
   return (
     <div className = 'home_main'>
-
+      <h1>{something}</h1>
       <h1> WELCOME TO TAUSIF'S REACT-REDUX TEMPLATE </h1>
       <h2> This is the landing page OR HOME page</h2>
       <h2> The states are stored in the REDUCERS folder and combined as 'allStates' in INDEX.js of that folder. State Update Actions are stored in Actions Folder.</h2>
@@ -24,7 +27,7 @@ const Home = ({allStates, dispatch}) => {
       <button onClick = { () => dispatch(sampleAction2()) }>Add 10</button> <br></br>
       <button onClick = { () => dispatch(reset()) }>RESET SAMPLE STATE</button>
       <br></br>
-      <p>Another Sample State is isLOGGED STATE that conditionally renders the following line: </p>
+      <p>Another Sample State is "isLOGGED" STATE that conditionally renders the following line: </p>
       {allStates.logged ? 
         <>
           <h1>YOU ARE <strong>LOGGED IN</strong></h1>
