@@ -8,6 +8,7 @@
 }
 .btn {
   cursor: pointer;
+  margin: 1vh 3vw;
   border: none;
   min-height: 5vh;
   border-radius: 6px;
