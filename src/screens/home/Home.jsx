@@ -30,7 +30,7 @@ const Home = ({allStates, dispatch}) => {
       <button onClick = { () => dispatch(sampleAction2()) }>Add 10</button> <br></br>
       <button onClick = { () => dispatch(reset()) }>RESET SAMPLE STATE</button>
       <br></br>
-      <p>Another Sample State is <strong>isLOGGED</strong> STATE that conditionally renders the following line: </p>
+      <p>Another Sample State is isLOGGED STATE that conditionally renders the following line: </p>
       {allStates.logged ? 
         <>
           <h1>YOU ARE <strong>LOGGED IN</strong></h1>
